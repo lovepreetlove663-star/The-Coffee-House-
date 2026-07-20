@@ -1,9 +1,13 @@
-import React from 'react'
+import Navbar from "./components/Navbar";
+import Router from "./router/Router";
 
-const App = () => {
+function App() {
   return (
-    <div className='h-[300px] w-[500px] bg-red-500'>App</div>
-  )
+    <div className="min-h-screen relative overflow-x-hidden">
+      <Navbar />
+      <Router />
+    </div>
+  );
 }
 
-export default App
+export default App;
