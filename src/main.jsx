@@ -1,16 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import About from "./pages/About.jsx";
-import Gallery from "./pages/Gallery.jsx";
-import Contact from "./pages/Contact.jsx";
-import "./App.css"
-import Footer from "./components/Footer"
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import App from "./App";
+// import "./index.css";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-       <About />    
-      <Gallery />   
-     <Contact />
-     <Footer />
-  </StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>,
 );
-

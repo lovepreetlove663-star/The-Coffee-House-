@@ -38,42 +38,48 @@ const galleryImages = [
     className: "h-75",
   },
   {
-    src:"/gallery/img.3.jpg",
-    className:"h-75",
+    src: "/gallery/img.3.jpg",
+    className: "h-75",
   },
 ];
 
 const Gallery = () => {
   return (
     <>
-    <section className="py-20 bg-[#5B3A2E]">
-      <div className="text-center gap-2">
-<h3 className="text-[#D9A441] font-semibold text-lg">Gallery</h3>
-<h1 className="text-3xl md:text-5xl font-semibold mt-3 "
-           style={{ fontFamily: "Cardo, serif" }}>A Glimpse Into The Coffee House</h1>
-<p className="text-lg md:text-xl text-white mt-4">Explore our cozy atmosphere, freshly brewed coffee, 
-  mouthwatering desserts, and the people who make every cup unforgettable.</p>
-  </div>
-    </section>
-    
-    <section className="py-20 bg-[#5B3A2E]">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="grid grid-cols-3 gap-6">
-      {galleryImages.map((image, index) => (
-        <div
-          key={index}
-          className={`overflow-hidden rounded-3xl ${image.className}`}
-        >
-          <img
-            src={image.src}
-            alt={`Gallery ${index + 1}`}
-            className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
-          />
+      <section className="py-20 bg-[#5B3A2E]">
+        <div className="text-center gap-2">
+          <h3 className="text-[#D9A441] font-semibold text-lg">Gallery</h3>
+          <h1
+            className="text-3xl md:text-5xl font-semibold mt-3 "
+            style={{ fontFamily: "Cardo, serif" }}
+          >
+            A Glimpse Into The Coffee House
+          </h1>
+          <p className="text-lg md:text-xl text-white mt-4">
+            Explore our cozy atmosphere, freshly brewed coffee, mouthwatering
+            desserts, and the people who make every cup unforgettable.
+          </p>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
+
+      <section className="py-20 bg-[#5B3A2E]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-3 gap-6">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className={`overflow-hidden rounded-3xl ${image.className}`}
+              >
+                <img
+                  src={image.src}
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 };
