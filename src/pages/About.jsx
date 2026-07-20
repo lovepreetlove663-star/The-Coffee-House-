@@ -65,7 +65,7 @@ const About = () => {
   return (
     <div>
   {/* Hero Section */}
-  <section className="bg-[#5B3A2E] px-6 py-20">
+  <section className="bg-[#5B3A2E] ">
     <div
       className="relative w-full h-[500px] rounded-3xl overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: "url('/background.jpg')" }}
@@ -123,7 +123,7 @@ const About = () => {
       </span>
 
       <h2
-        className="mt-2 text-3xl font-bold text-black md:text-4xl"
+        className="mt-2 text-3xl font-bold text-[#F8F4EF] md:text-4xl"
         style={{ fontFamily: "Cardo, serif" }}
       >
         More Than Coffee, A Place to Belong
@@ -180,7 +180,7 @@ const About = () => {
         Why Choose Us
       </h3>
 
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 text-black"
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 text-[#F8F4EF]"
       style={{ fontFamily: "Cardo, serif" }}>
         Why You'll Love The Coffee House
       </h2>
@@ -198,13 +198,13 @@ const About = () => {
       {features2.map((feature, index) => (
         <div
           key={index}
-          className="flex items-start gap-5 p-6 rounded-2xl bg-[#6B4637] hover:bg-[#745245] hover:shadow-2xl transition duration-300"
+          className="flex items-start gap-5 p-5 rounded-2xl bg-[#6B4637] hover:bg-[#745245] hover:shadow-2xl transition duration-300"
           >
           <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
   <img
     src={feature.icon}
     alt={feature.title}
-    className="w-12 h-12 object-contain"
+    className="w-12 h-12 object-contain rounded-3xl"
   />
 </div>
           
