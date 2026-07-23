@@ -14,7 +14,8 @@
 // };
 
 // export default Desserts;
-
+import { useState } from "react";
+import Popup from "../components/Popup";
 const dessertsData = [
   {
     id: 1,
@@ -60,21 +61,21 @@ const dessertsData = [
   },
 ];
 const Desserts = () => {
+  const [selectedCoffee, setSelectedCoffee] = useState(null);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
       {dessertsData.map((dessert) => (
         <div
           key={dessert.id}
+          onClick={() => setSelectedCoffee(dessert)}
           className="bg-[#5b3a2f] rounded-2xl overflow-hidden shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
         >
-          {/* Image */}
           <img
             src={dessert.image}
             alt={dessert.name}
             className="w-full h-[250px] object-cover"
           />
 
-          {/* Content */}
           <div className="p-4">
             <div className="flex justify-between items-center">
               <h2 className="text-xl font-bold text-white">{dessert.name}</h2>
@@ -90,6 +91,10 @@ const Desserts = () => {
           </div>
         </div>
       ))}
+      <Popup
+        coffee={selectedCoffee}
+        closePopup={() => setSelectedCoffee(null)}
+      />
     </div>
   );
 };

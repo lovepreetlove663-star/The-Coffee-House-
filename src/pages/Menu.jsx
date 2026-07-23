@@ -10,14 +10,16 @@
 // export default Menu;
 
 import { NavLink, Outlet } from "react-router-dom";
+import Wishlist from "../components/wishlist";
 
-const Menu = () => {
+const Menu = ({ showWishlist, setShowWishlist }) => {
   const navStyle = ({ isActive }) =>
     `px-8 py-3 rounded-full border transition-all duration-300 ${
       isActive
         ? "bg-[#9b6a3d] text-white border-[#9b6a3d]"
         : "bg-transparent text-gray-300 border-gray-600 hover:bg-[#9b6a3d] hover:border-[#9b6a3d] hover:text-white"
     }`;
+
   return (
     <section className="flex flex-col">
       <div className="w-full flex flex-col justify-center bg-[#772e09] items-center text-center pt-24 pb-10">
@@ -50,8 +52,9 @@ const Menu = () => {
       <div className=" bg-[#772e09e3] shadow-amber-600 pt-8 pb-8">
         <Outlet />
       </div>
+
+      <Wishlist show={showWishlist} onClose={() => setShowWishlist(false)} />
     </section>
   );
 };
-
 export default Menu;
