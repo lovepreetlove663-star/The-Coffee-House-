@@ -78,9 +78,7 @@ const Navbar = () => {
       <div
         onClick={closeMenu}
         className={`fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 lg:hidden ${
-          menuOpen
-            ? "opacity-100 visible"
-            : "opacity-0 invisible"
+          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       ></div>
 

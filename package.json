@@ -17,8 +17,9 @@
     "react-hook-form": "^7.82.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^7.18.1",
+    "tailwindcss": "^4.3.2",
     "swiper": "^14.0.6",
-    "tailwindcss": "^4.3.2"
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

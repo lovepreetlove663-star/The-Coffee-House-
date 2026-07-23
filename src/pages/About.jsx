@@ -1,6 +1,6 @@
 import React from "react";
 import { Coffee, ChefHat, Users, Heart } from "lucide-react";
-// import Footer from "../components/Footer";
+
 const features = [
   {
     icon: Coffee,
