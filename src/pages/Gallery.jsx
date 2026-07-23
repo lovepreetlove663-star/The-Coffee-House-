@@ -50,7 +50,7 @@ const Gallery = () => {
         <div className="text-center gap-2">
           <h3 className="text-[#D9A441] font-semibold text-lg">Gallery</h3>
           <h1
-            className="text-3xl md:text-5xl font-semibold mt-3 "
+            className="text-3xl md:text-5xl lg:text-2xl font-semibold mt-3 text-[#F8F4EF]"
             style={{ fontFamily: "Cardo, serif" }}
           >
             A Glimpse Into The Coffee House
@@ -62,9 +62,9 @@ const Gallery = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-[#5B3A2E]">
+      <section className="py-2 bg-[#5B3A2E] md:text-xl">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
               <div
                 key={index}

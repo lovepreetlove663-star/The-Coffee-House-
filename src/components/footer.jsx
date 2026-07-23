@@ -1,10 +1,9 @@
 import React from "react";
 import { Coffee, MapPin, Phone, Mail } from "lucide-react";
-// import { useNavigate } from "react-router-dom";
+
 const Footer = () => {
-  // const navigate = useNavigate();
   return (
-    <footer className="bg-[#5B3A2E] text-[#E8DDD6] py-20">
+    <footer className="bg-[#4A2F25] border-t border-[#D9A441]/30 text-[#E8DDD6] py-20">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Footer Content */}
